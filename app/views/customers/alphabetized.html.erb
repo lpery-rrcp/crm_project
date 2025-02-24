@@ -1,0 +1,8 @@
+<h1>Alphabetized Customers</h1>
+
+<%= link_to "Back to Customers", customers_path %> |
+<%= link_to "Customers Missing Email", customers_missing_email_path %>
+
+<% @customers.each do |customer| %>
+  <%= render partial: "customer", locals: {custoemr: customer} %>
+<% end %>
