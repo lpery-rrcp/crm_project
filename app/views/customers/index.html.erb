@@ -4,5 +4,5 @@
 <%= link_to "Customers Missing Email", customers_missing_email_path %>
 
 <% @customers.each do |customer| %>
-  <%= render partial: "customer", locals: {custoemr: customer} %>
+  <%= render partial: "customer", locals: {customer: customer} %>
 <% end %>

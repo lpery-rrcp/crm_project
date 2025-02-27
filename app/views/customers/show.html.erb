@@ -1,0 +1,5 @@
+<h1><%= @customer.full_name %></h1>
+<p>Email: <%= @customer.email.presence || "No Email" %></p>
+<p>Phone: <%= @customer.phone_number.presence || "No Phone" %></p>
+
+<%= link_to "Back to Customers", customers_path %>

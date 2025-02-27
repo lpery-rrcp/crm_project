@@ -3,7 +3,6 @@
 <%= link_to "Back to Customers", customers_path %> |
 <%= link_to "Alphabetized Customers", customers_alphabetized_path %>
 
-
 <% @customers.each do |customer| %>
-  <%= render partial: "customer", locals: {custoemr: customer} %>
+  <%= render partial: "customer", locals: { customer: customer } %>
 <% end %>

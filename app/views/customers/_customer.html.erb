@@ -1,6 +1,6 @@
 <div class="customer-css">
-  <% if customer.image.attached?customer-picture %>
-    <% image_tag customer.image, class: "" %>
+  <% if customer.image.attached? %>
+    <% image_tag customer.image, class: "customer-picture" %>
   <% end %>
   <h2><%= customer.full_name %></h2>
   <p>Phone Number: <% customer.email %></p>
@@ -9,5 +9,5 @@
   <% else %>
     <p>Email: <em>Not provided</em>> </p>
   <% end %>
-  <p><%= cutomer.notes %></p>
+  <p><%= customer.notes %></p>
 </div>

@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  root "cusotmers#index"
+  root "customers#index"
 
-  get "customers/alphabetized" to: "cusotmers#alphabetized"
-  get "customers/missing_email" to: "cusotmers#missing_email"
+  get "customers/alphabetized", to: "customers#alphabetized"
+  get "customers/missing_email", to: "customers#missing_email"
+
+  resources :customers, only: [:index, :show]
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
